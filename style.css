@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .container {
-  font-family: "Courier New", Courier, monospace;
   display: grid;
   height: 100vh;
   width: 100vw;
@@ -64,6 +64,35 @@ input:focus {
 .btn:active {
   transform: translate(2px, 2px);
   box-shadow: 1px 1px 3px pink;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: grid;
+  top: 0;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.popup {
+  color: white;
+  padding: 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 2px white;
+  font-size: 1rem;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  transition: all 0.5s;
+  transform: scale(0);
 }
 
 @keyframes boom {
